@@ -1,4 +1,4 @@
-# pycnmcvtr - a tool for getting informations for Chinese characters
+# pycmncvtr - a tool for getting informations for Chinese characters
 
 ## What is this?
 
