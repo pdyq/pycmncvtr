@@ -32,25 +32,25 @@ def main(s):
     rule = hanzi.identify(s)
     trad = ""
     simp = ""
-    py = ""
     bpmf = ""
+    py = ""
     match rule:
         case 0:
             print("GIVE UP")
         case 3:
             trad = s
             simp = 0
-            py = hanzi.to_pinyin(s)
             bpmf = hanzi.to_zhuyin(s)
+            py = hanzi.to_pinyin(s)
         case _:
             trad = HanziConv.toTraditional(s)
             simp = HanziConv.toSimplified(s)
-            py = hanzi.to_pinyin(HanziConv.toTraditional(s))
             bpmf = hanzi.to_zhuyin(HanziConv.toTraditional(s))
+            py = hanzi.to_pinyin(HanziConv.toTraditional(s))
     if simp:
-        clipboard.copy(trad + "(" + simp + ") " + py + " " + bpmf)
+        clipboard.copy(trad + "(" + simp + ") " + bpmf + " " + py)
     else:
-        clipboard.copy(trad + " " + py + " " + bpmf)
+        clipboard.copy(trad + " " + bpmf + " " + py)
 
 
 main(text)
