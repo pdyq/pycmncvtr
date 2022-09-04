@@ -1,7 +1,7 @@
 # pycnmcvtr - a tool for getting informations for Chinese characters
 
 ## What is this?
----
+--- 
 
 This program gets text from your clipboard and provide:
 
